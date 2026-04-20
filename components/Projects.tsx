@@ -27,6 +27,18 @@ const projects = [
   }
 ];
 
+const cardVariants = {
+  hidden: { opacity: 0, y: 40 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: "easeOut" as const
+    }
+  }
+};
+
 export default function Projects() {
   return (
     <section id="projects" className="py-24 bg-[var(--bg-card)]">
@@ -44,13 +56,14 @@ export default function Projects() {
 
         {/* Project Cards */}
         <div className="flex flex-col gap-12">
-          {projects.map((project) => (
+          {projects.map((project, index) => (
             <motion.div
               key={project.title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              variants={cardVariants}
+              initial="hidden"
+              whileInView="visible"
               viewport={{ once: true, amount: 0.2 }}
-              transition={{ duration: 0.5, delay: 0.1, ease: "easeOut" as const }}
+              transition={{ delay: index * 0.15 }}
               className="group"
             >
               {/* Image Container */}
