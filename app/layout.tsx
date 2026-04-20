@@ -1,23 +1,13 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
+import { Inter } from "next/font/google";
 import "./globals.css";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Tinotenda Chandengenda — Software Engineer",
   description:
-    "Full-stack software engineer specializing in building modern, scalable web applications with React, Next.js, Spring Boot, and cloud technologies.",
+    "Software and DevOps Engineer with experience building scalable backend systems, web applications, and middleware integrations using Java, Spring Boot, Docker, and RESTful APIs.",
 };
 
 export default function RootLayout({
@@ -27,12 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-        style={{ fontFamily: "var(--font-geist-sans), sans-serif" }}
-      >
-        {children}
-      </body>
+      <body className={inter.className}>{children}</body>
     </html>
   );
 }

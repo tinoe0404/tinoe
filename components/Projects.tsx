@@ -59,6 +59,7 @@ export default function Projects() {
                   src={project.image}
                   alt={project.title}
                   fill
+                  unoptimized={true}
                   className="object-cover"
                 />
               </div>

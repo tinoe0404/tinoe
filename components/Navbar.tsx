@@ -32,6 +32,7 @@ export default function Navbar() {
             alt="Logo"
             width={36}
             height={36}
+            unoptimized={true}
             className="rounded-full cursor-pointer hover:opacity-80 transition-opacity"
           />
         </Link>

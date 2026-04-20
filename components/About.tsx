@@ -80,6 +80,7 @@ export default function About() {
               alt="Tinotenda Chandengenda"
               width={280}
               height={350}
+              unoptimized={true}
               className="rounded-lg border border-[var(--border)] object-cover object-top w-[280px] h-auto"
             />
           </motion.div>
