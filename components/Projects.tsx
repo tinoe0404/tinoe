@@ -78,7 +78,7 @@ export default function Projects() {
                   href={project.source}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm text-[var(--text-muted)] underline-offset-4 hover:underline hover:text-[var(--text)] transition-colors"
+                  className="text-sm text-[var(--text-muted)] underline-offset-4 hover:underline hover:text-[var(--text)] transition-colors py-2"
                 >
                   Source
                 </a>
@@ -86,7 +86,7 @@ export default function Projects() {
                   href={project.preview}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm text-[var(--text-muted)] underline-offset-4 hover:underline hover:text-[var(--text)] transition-colors"
+                  className="text-sm text-[var(--text-muted)] underline-offset-4 hover:underline hover:text-[var(--text)] transition-colors py-2"
                 >
                   Preview
                 </a>

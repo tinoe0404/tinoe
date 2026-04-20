@@ -11,11 +11,11 @@ const fadeUp = (delay: number) => ({
 export default function Hero() {
   return (
     <section className="min-h-screen flex items-center">
-      <div className="max-w-3xl mx-auto px-6 pt-[120px]">
+      <div className="max-w-3xl mx-auto px-6 pt-[100px] sm:pt-[120px]">
         {/* Name */}
         <motion.h1
           {...fadeUp(0)}
-          className="text-4xl md:text-6xl font-bold text-[var(--text)] mb-2"
+          className="text-4xl lg:text-6xl font-bold text-[var(--text)] mb-2"
         >
           Tinotenda Chandengenda
         </motion.h1>
@@ -31,7 +31,7 @@ export default function Hero() {
         {/* Bio */}
         <motion.p
           {...fadeUp(0.2)}
-          className="text-base text-[var(--text-muted)] max-w-[560px] leading-relaxed mb-8"
+          className="text-base text-[var(--text-muted)] w-full sm:max-w-[560px] leading-relaxed mb-8"
         >
           Software and DevOps Engineer with experience building scalable backend
           systems, web applications, and middleware integrations using Java,
@@ -44,7 +44,7 @@ export default function Hero() {
         <motion.a
           {...fadeUp(0.3)}
           href="mailto:tinochan06@gmail.com"
-          className="inline-block border border-[var(--border)] rounded-full px-6 py-2 text-sm text-[var(--text)] hover:bg-[var(--bg-card)] hover:border-[var(--text-muted)] transition-all duration-200 ease-in-out"
+          className="inline-flex min-h-[44px] items-center justify-center border border-[var(--border)] rounded-full px-6 py-2 text-sm text-[var(--text)] hover:bg-[var(--bg-card)] hover:border-[var(--text-muted)] transition-all duration-200 ease-in-out"
         >
           Get in Touch
         </motion.a>

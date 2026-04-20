@@ -50,7 +50,7 @@ export default function Experience() {
               }`}
             >
               {/* Left Column */}
-              <div className="w-full sm:w-48 sm:shrink-0 mb-4 sm:mb-0">
+              <div className="w-full sm:w-48 sm:shrink-0 mb-3 sm:mb-0">
                 <p className="text-sm font-semibold text-[var(--text)]">
                   {exp.company}
                 </p>

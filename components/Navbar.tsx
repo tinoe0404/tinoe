@@ -26,7 +26,7 @@ export default function Navbar() {
     >
       <div className="max-w-3xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo (Left) */}
-        <Link href="/">
+        <Link href="/" className="py-2">
           <Image
             src="/images/avatar-small.jpg"
             alt="Logo"
@@ -41,19 +41,19 @@ export default function Navbar() {
         <nav className="hidden sm:flex items-center gap-6">
           <Link
             href="#experience"
-            className="text-sm text-[var(--text-muted)] hover:text-[var(--text)] transition-colors"
+            className="text-sm text-[var(--text-muted)] hover:text-[var(--text)] transition-colors py-2"
           >
             Experience
           </Link>
           <Link
             href="#projects"
-            className="text-sm text-[var(--text-muted)] hover:text-[var(--text)] transition-colors"
+            className="text-sm text-[var(--text-muted)] hover:text-[var(--text)] transition-colors py-2"
           >
             Projects
           </Link>
           <Link
             href="#about"
-            className="text-sm text-[var(--text-muted)] hover:text-[var(--text)] transition-colors"
+            className="text-sm text-[var(--text-muted)] hover:text-[var(--text)] transition-colors py-2"
           >
             About
           </Link>

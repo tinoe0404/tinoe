@@ -44,7 +44,7 @@ export default function About() {
                 href="https://github.com/tinochandengenda"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 text-sm text-[var(--text-muted)] hover:text-[var(--text)] transition-colors w-fit"
+                className="flex items-center gap-2 text-sm text-[var(--text-muted)] hover:text-[var(--text)] transition-colors w-fit py-2"
               >
                 <span>↗</span> GitHub
               </a>
@@ -52,7 +52,7 @@ export default function About() {
                 href="https://linkedin.com/in/tinochandengenda"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 text-sm text-[var(--text-muted)] hover:text-[var(--text)] transition-colors w-fit"
+                className="flex items-center gap-2 text-sm text-[var(--text-muted)] hover:text-[var(--text)] transition-colors w-fit py-2"
               >
                 <span>↗</span> LinkedIn
               </a>
@@ -60,7 +60,7 @@ export default function About() {
                 href="https://twitter.com/tinochandengenda"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 text-sm text-[var(--text-muted)] hover:text-[var(--text)] transition-colors w-fit"
+                className="flex items-center gap-2 text-sm text-[var(--text-muted)] hover:text-[var(--text)] transition-colors w-fit py-2"
               >
                 <span>↗</span> Twitter
               </a>
@@ -73,7 +73,7 @@ export default function About() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2, ease: "easeOut" as const }}
-            className="w-[280px] shrink-0"
+            className="w-full sm:w-[280px] shrink-0 max-w-xs mx-auto sm:mx-0"
           >
             <Image
               src="/images/avatar-big.jpg"
@@ -81,7 +81,7 @@ export default function About() {
               width={280}
               height={350}
               unoptimized={true}
-              className="rounded-lg border border-[var(--border)] object-cover object-top w-[280px] h-auto"
+              className="rounded-lg border border-[var(--border)] object-cover object-top w-full sm:w-[280px] h-auto"
             />
           </motion.div>
         </div>
