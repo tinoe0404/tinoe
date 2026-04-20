@@ -6,87 +6,91 @@ import Image from "next/image";
 const projects = [
   {
     title: "CashAgent",
-    description:
-      "A fintech cash management platform with real-time analytics and role-based access control.",
+    description: "A personal finance tracker with transaction categories, PIN lock security, and soft-delete. Built with Next.js 15, Neon PostgreSQL, Drizzle ORM, and Tailwind CSS.",
     image: "/images/project-cashagent.png",
-    technologies: ["Next.js", "TypeScript", "Spring Boot", "PostgreSQL"],
-    liveUrl: "#",
-    githubUrl: "#",
+    source: "https://github.com/tinochandengenda",
+    preview: "https://cashagent.vercel.app"
   },
   {
-    title: "GoWild",
-    description:
-      "Safari adventure booking platform with destination search and wildlife-focused experiences.",
+    title: "Go Wild Tours",
+    description: "A full safari tourism website featuring a custom CSS design system with earth tones, Framer Motion animations, and a structured Destinations section.",
     image: "/images/project-gowild.png",
-    technologies: ["React", "Node.js", "MongoDB", "Tailwind CSS"],
-    liveUrl: "#",
-    githubUrl: "#",
+    source: "https://github.com/tinochandengenda",
+    preview: "https://gowildtours.vercel.app"
   },
   {
-    title: "JoshWires",
-    description:
-      "Professional electrical services website with contact management and email notifications.",
+    title: "Joshwires",
+    description: "A professional business website for a wire mesh and fencing company, built to world-class UI/UX standards with Next.js and Tailwind CSS.",
     image: "/images/project-joshwires.png",
-    technologies: ["Next.js", "Tailwind CSS", "Nodemailer", "Vercel"],
-    liveUrl: "#",
-    githubUrl: "#",
-  },
+    source: "https://github.com/tinochandengenda",
+    preview: "https://josh-wires.vercel.app"
+  }
 ];
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-24 px-6">
-      <div className="max-w-5xl mx-auto">
-        <motion.div
+    <section id="projects" className="py-24 bg-[var(--bg-card)]">
+      <div className="max-w-3xl mx-auto px-6">
+        {/* Section Header */}
+        <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.5 }}
-          className="mb-16"
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, ease: "easeOut" as const }}
+          className="text-2xl font-semibold mb-12"
         >
-          <span className="text-xs uppercase tracking-[0.2em] text-[var(--text-muted)] mb-3 block">
-            Projects
-          </span>
-          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">
-            Selected work
-          </h2>
-        </motion.div>
+          Featured Projects
+        </motion.h2>
 
-        <div className="space-y-20">
-          {projects.map((project, i) => (
-            <motion.article
+        {/* Project Cards */}
+        <div className="flex flex-col gap-12">
+          {projects.map((project) => (
+            <motion.div
               key={project.title}
-              initial={{ opacity: 0, y: 50 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-80px" }}
-              transition={{ delay: i * 0.15, duration: 0.6 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.5, delay: 0.1, ease: "easeOut" as const }}
               className="group"
             >
-              <div className={`flex flex-col ${i % 2 === 1 ? "lg:flex-row-reverse" : "lg:flex-row"} gap-8 items-center`}>
-                <div className="w-full lg:w-3/5 relative overflow-hidden rounded-xl border border-[var(--border)] bg-[var(--bg-card)]">
-                  <div className="relative aspect-[16/10] overflow-hidden">
-                    <Image src={project.image} alt={project.title} fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
-                    <div className="absolute inset-0 bg-[var(--bg)]/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
-                      <a href={project.liveUrl} className="px-4 py-2 text-xs font-medium bg-[var(--accent)] text-[var(--bg)] rounded-full">Live Demo</a>
-                      <a href={project.githubUrl} className="px-4 py-2 text-xs font-medium border border-[var(--accent)] text-[var(--accent)] rounded-full hover:bg-[var(--accent)] hover:text-[var(--bg)] transition-all">GitHub</a>
-                    </div>
-                  </div>
-                </div>
-                <div className="w-full lg:w-2/5 space-y-4">
-                  <h3 className="text-2xl font-bold">{project.title}</h3>
-                  <p className="text-sm text-[var(--text-muted)] leading-relaxed">{project.description}</p>
-                  <div className="flex flex-wrap gap-2 pt-2">
-                    {project.technologies.map((tech) => (
-                      <span key={tech} className="px-3 py-1 text-xs text-[var(--text-muted)] border border-[var(--border)] rounded-full bg-[var(--bg-card)]">{tech}</span>
-                    ))}
-                  </div>
-                  <div className="flex gap-4 pt-2">
-                    <a href={project.liveUrl} className="text-xs text-[var(--text-muted)] hover:text-[var(--text)] transition-colors underline underline-offset-4">View project →</a>
-                    <a href={project.githubUrl} className="text-xs text-[var(--text-muted)] hover:text-[var(--text)] transition-colors underline underline-offset-4">Source code →</a>
-                  </div>
-                </div>
+              {/* Image Container */}
+              <div className="relative aspect-video w-full rounded-lg border border-[var(--border)] overflow-hidden">
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  fill
+                  className="object-cover"
+                />
               </div>
-            </motion.article>
+
+              {/* Text Content */}
+              <h3 className="text-lg font-semibold text-[var(--text)] mt-4">
+                {project.title}
+              </h3>
+              <p className="text-sm text-[var(--text-muted)] mt-2 leading-relaxed">
+                {project.description}
+              </p>
+
+              {/* Links Row */}
+              <div className="mt-3 flex gap-4">
+                <a
+                  href={project.source}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-[var(--text-muted)] underline-offset-4 hover:underline hover:text-[var(--text)] transition-colors"
+                >
+                  Source
+                </a>
+                <a
+                  href={project.preview}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-[var(--text-muted)] underline-offset-4 hover:underline hover:text-[var(--text)] transition-colors"
+                >
+                  Preview
+                </a>
+              </div>
+            </motion.div>
           ))}
         </div>
       </div>
