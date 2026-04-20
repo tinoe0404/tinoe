@@ -3,79 +3,85 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 
-const skills = [
-  { category: "Frontend", items: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"] },
-  { category: "Backend", items: ["Spring Boot", "Java", "Node.js", "REST APIs", "GraphQL"] },
-  { category: "Database", items: ["PostgreSQL", "MongoDB", "MySQL", "Redis", "Prisma"] },
-  { category: "DevOps", items: ["Docker", "Git", "CI/CD", "Vercel", "AWS"] },
-];
-
 export default function About() {
   return (
-    <section id="about" className="py-24 px-6">
-      <div className="max-w-5xl mx-auto">
-        <motion.div
+    <section id="about" className="py-24">
+      <div className="max-w-3xl mx-auto px-6">
+        {/* Section Header */}
+        <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.5 }}
-          className="mb-16"
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, ease: "easeOut" as const }}
+          className="text-2xl font-semibold mb-12"
         >
-          <span className="text-xs uppercase tracking-[0.2em] text-[var(--text-muted)] mb-3 block">About</span>
-          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">A bit about me</h2>
-        </motion.div>
+          About Me
+        </motion.h2>
 
-        <div className="flex flex-col lg:flex-row gap-12 items-start">
-          {/* Image */}
+        <div className="flex flex-col sm:flex-row gap-12">
+          {/* Left Column (Text + Socials) */}
           <motion.div
-            initial={{ opacity: 0, x: -40 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="w-full lg:w-2/5 flex-shrink-0"
+            transition={{ duration: 0.5, delay: 0.1, ease: "easeOut" as const }}
+            className="flex-1"
           >
-            <div className="relative aspect-[4/5] rounded-xl overflow-hidden border border-[var(--border)]">
-              <Image src="/images/avatar-big.jpg" alt="Tinotenda Chandengenda" fill className="object-cover" />
-              <div className="absolute inset-0 bg-gradient-to-t from-[var(--bg)] via-transparent to-transparent" />
+            <p className="text-sm text-[var(--text-muted)] leading-relaxed max-w-md">
+              I&apos;m Tinotenda Chandengenda, a Software and DevOps Engineer
+              based in Harare, Zimbabwe. I&apos;m passionate about building
+              real-world systems that are scalable, maintainable, and
+              production-ready. My work spans backend development with Java and
+              Spring Boot, full-stack web apps with Next.js and NestJS, and
+              DevOps pipelines using Docker and GitHub Actions. I&apos;m
+              currently interning at Tano Digital Group while pursuing my degree
+              at Harare Institute of Technology, and I take on freelance client
+              projects on the side.
+            </p>
+
+            <div className="mt-8 flex flex-col gap-3">
+              <a
+                href="https://github.com/tinochandengenda"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-sm text-[var(--text-muted)] hover:text-[var(--text)] transition-colors w-fit"
+              >
+                <span>↗</span> GitHub
+              </a>
+              <a
+                href="https://linkedin.com/in/tinochandengenda"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-sm text-[var(--text-muted)] hover:text-[var(--text)] transition-colors w-fit"
+              >
+                <span>↗</span> LinkedIn
+              </a>
+              <a
+                href="https://twitter.com/tinochandengenda"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-sm text-[var(--text-muted)] hover:text-[var(--text)] transition-colors w-fit"
+              >
+                <span>↗</span> Twitter
+              </a>
             </div>
           </motion.div>
 
-          {/* Text + Skills */}
+          {/* Right Column (Photo) */}
           <motion.div
-            initial={{ opacity: 0, x: 40 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.15 }}
-            className="w-full lg:w-3/5 space-y-6"
+            transition={{ duration: 0.5, delay: 0.2, ease: "easeOut" as const }}
+            className="w-[280px] shrink-0"
           >
-            <p className="text-[var(--text-muted)] leading-relaxed">
-              I&apos;m Tinotenda Chandengenda, a full-stack software engineer passionate about building digital products that are both functional and beautiful. I enjoy turning complex problems into simple, elegant solutions.
-            </p>
-            <p className="text-[var(--text-muted)] leading-relaxed">
-              When I&apos;m not coding, you&apos;ll find me exploring new technologies, contributing to open-source projects, or diving into system design concepts. I believe in writing clean, maintainable code and continuously learning.
-            </p>
-
-            {/* Skills grid */}
-            <div className="grid grid-cols-2 gap-6 pt-4">
-              {skills.map((group, i) => (
-                <motion.div
-                  key={group.category}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.2 + i * 0.1, duration: 0.4 }}
-                >
-                  <h4 className="text-xs uppercase tracking-[0.15em] text-[var(--text-muted)] mb-3">{group.category}</h4>
-                  <div className="flex flex-wrap gap-1.5">
-                    {group.items.map((skill) => (
-                      <span key={skill} className="px-2.5 py-1 text-xs text-[var(--text-muted)] border border-[var(--border)] rounded-md bg-[var(--bg-card)] hover:border-[var(--text-muted)] transition-colors duration-200">
-                        {skill}
-                      </span>
-                    ))}
-                  </div>
-                </motion.div>
-              ))}
-            </div>
+            <Image
+              src="/images/avatar-big.jpg"
+              alt="Tinotenda Chandengenda"
+              width={280}
+              height={350}
+              className="rounded-lg border border-[var(--border)] object-cover object-top w-[280px] h-auto"
+            />
           </motion.div>
         </div>
       </div>
