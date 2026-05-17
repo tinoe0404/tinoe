@@ -3,12 +3,13 @@
 @tailwind utilities;
 
 :root {
-  --bg: #0a0a0a;
-  --bg-card: #141414;
-  --text: #ededed;
-  --text-muted: #888888;
-  --border: #222222;
-  --accent: #ededed;
+  --bg: #050505;
+  --bg-card: #0a0a0a;
+  --text: #f5f5f5;
+  --text-muted: #a1a1aa;
+  --border: #1f1f22;
+  --accent: #3b82f6; /* Electric Blue */
+  --accent-glow: rgba(59, 130, 246, 0.15);
 }
 
 * {
@@ -33,13 +34,13 @@ body {
 }
 
 ::selection {
-  background: #ededed;
-  color: #0a0a0a;
+  background: var(--accent);
+  color: #fff;
 }
 
 /* Scrollbar styling */
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 8px;
 }
 
 ::-webkit-scrollbar-track {
@@ -47,8 +48,12 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--border);
-  border-radius: 3px;
+  background: #27272a;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3f3f46;
 }
 
 /* Links and interactives */
@@ -63,5 +68,20 @@ a, button, [role="button"], input, select, textarea {
 
 /* Section Transitions */
 section[id] {
-  scroll-margin-top: 80px;
+  scroll-margin-top: 100px;
+}
+
+/* Glassmorphism Utilities */
+.glass {
+  background: rgba(10, 10, 10, 0.4);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.glass-card {
+  background: linear-gradient(145deg, rgba(30,30,30,0.4) 0%, rgba(10,10,10,0.4) 100%);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }

@@ -17,16 +17,16 @@ export default function Navbar() {
   }, []);
 
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b ${
-        scrolled
-          ? "bg-[var(--bg)]/80 backdrop-blur-sm border-[var(--border)]"
-          : "bg-[var(--bg)] border-transparent"
-      }`}
-    >
-      <div className="max-w-3xl mx-auto px-6 py-4 flex items-center justify-between">
+    <header className="fixed top-6 left-0 right-0 z-50 flex justify-center px-4 transition-all duration-300">
+      <div
+        className={`flex items-center justify-between px-6 py-3 rounded-full transition-all duration-500 w-full max-w-2xl ${
+          scrolled
+            ? "glass shadow-lg border-[var(--border)]"
+            : "bg-transparent border-transparent"
+        }`}
+      >
         {/* Logo (Left) */}
-        <Link href="/" className="py-2">
+        <Link href="/" className="flex items-center">
           <Image
             src="/images/avatar-small.jpg"
             alt="Logo"
@@ -34,27 +34,27 @@ export default function Navbar() {
             height={36}
             priority
             sizes="36px"
-            className="rounded-full cursor-pointer hover:opacity-80 transition-opacity"
+            className="rounded-full cursor-pointer hover:scale-105 transition-transform"
           />
         </Link>
 
         {/* Nav Links (Right) */}
-        <nav className="hidden sm:flex items-center gap-6">
+        <nav className="hidden sm:flex items-center gap-2">
           <Link
             href="#experience"
-            className="text-sm text-[var(--text-muted)] hover:text-[var(--text)] transition-colors py-2"
+            className="text-sm font-medium text-[var(--text-muted)] hover:text-white hover:bg-[var(--bg-card)] px-4 py-2 rounded-full transition-all"
           >
             Experience
           </Link>
           <Link
             href="#projects"
-            className="text-sm text-[var(--text-muted)] hover:text-[var(--text)] transition-colors py-2"
+            className="text-sm font-medium text-[var(--text-muted)] hover:text-white hover:bg-[var(--bg-card)] px-4 py-2 rounded-full transition-all"
           >
             Projects
           </Link>
           <Link
             href="#about"
-            className="text-sm text-[var(--text-muted)] hover:text-[var(--text)] transition-colors py-2"
+            className="text-sm font-medium text-[var(--text-muted)] hover:text-white hover:bg-[var(--bg-card)] px-4 py-2 rounded-full transition-all"
           >
             About
           </Link>

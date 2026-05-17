@@ -17,21 +17,21 @@ const experiences = [
 
 export default function Experience() {
   return (
-    <section id="experience" className="py-24">
-      <div className="max-w-3xl mx-auto px-6">
+    <section id="experience" className="py-24 relative">
+      <div className="max-w-4xl mx-auto px-6 relative z-10">
         {/* Section Header */}
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, ease: "easeOut" as const }}
-          className="text-2xl font-semibold mb-12"
+          className="text-3xl md:text-4xl font-bold mb-12 tracking-tight"
         >
           Work Experience
         </motion.h2>
 
         {/* Experience List */}
-        <div>
+        <div className="space-y-6">
           {experiences.map((exp, i) => (
             <motion.div
               key={i}
@@ -43,35 +43,38 @@ export default function Experience() {
                 delay: i * 0.1,
                 ease: "easeOut" as const,
               }}
-              className={`py-8 flex flex-col sm:flex-row gap-0 sm:gap-8 ${
-                i < experiences.length - 1
-                  ? "border-b border-[var(--border)]"
-                  : ""
-              }`}
+              className="glass-card rounded-2xl p-6 sm:p-8 hover:-translate-y-1 transition-transform duration-300"
             >
-              {/* Left Column */}
-              <div className="w-full sm:w-48 sm:shrink-0 mb-3 sm:mb-0">
-                <p className="text-sm font-semibold text-[var(--text)]">
-                  {exp.company}
-                </p>
-                <p className="text-sm text-[var(--text-muted)]">{exp.role}</p>
-                <p className="text-xs text-[var(--text-muted)] mt-1">
-                  {exp.dates}
-                </p>
-              </div>
+              <div className="flex flex-col sm:flex-row gap-6">
+                {/* Left Column */}
+                <div className="w-full sm:w-1/3 shrink-0">
+                  <h3 className="text-xl font-semibold text-[var(--text)] mb-1">
+                    {exp.company}
+                  </h3>
+                  <p className="text-base text-[var(--accent)] font-medium mb-2">
+                    {exp.role}
+                  </p>
+                  <p className="text-sm text-[var(--text-muted)] font-mono">
+                    {exp.dates}
+                  </p>
+                </div>
 
-              {/* Right Column */}
-              <div className="flex-1">
-                <ul className="list-disc pl-4 space-y-2">
-                  {exp.bullets.map((bullet, j) => (
-                    <li
-                      key={j}
-                      className="text-sm text-[var(--text-muted)] leading-relaxed"
-                    >
-                      {bullet}
-                    </li>
-                  ))}
-                </ul>
+                {/* Right Column */}
+                <div className="flex-1">
+                  <ul className="space-y-3">
+                    {exp.bullets.map((bullet, j) => (
+                      <li
+                        key={j}
+                        className="text-sm md:text-base text-[var(--text-muted)] leading-relaxed flex items-start"
+                      >
+                        <span className="text-[var(--accent)] mr-3 mt-1.5 opacity-50 text-xs">
+                          ▹
+                        </span>
+                        <span>{bullet}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             </motion.div>
           ))}
