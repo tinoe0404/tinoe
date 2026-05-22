@@ -53,6 +53,12 @@ export default function Navbar() {
             Projects
           </Link>
           <Link
+            href="#activity"
+            className="text-sm font-medium text-[var(--text-muted)] hover:text-white hover:bg-[var(--bg-card)] px-4 py-2 rounded-full transition-all"
+          >
+            Activity
+          </Link>
+          <Link
             href="#about"
             className="text-sm font-medium text-[var(--text-muted)] hover:text-white hover:bg-[var(--bg-card)] px-4 py-2 rounded-full transition-all"
           >
