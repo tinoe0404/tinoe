@@ -18,6 +18,8 @@ export default function About() {
           About Me
         </motion.h2>
 
+        
+
         <div className="flex flex-col md:flex-row gap-12 items-start">
           {/* Left Column (Text + Socials) */}
           <motion.div
