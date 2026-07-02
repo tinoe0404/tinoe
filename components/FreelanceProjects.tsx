@@ -10,17 +10,9 @@ const freelanceProjects = [
     id: 1,
     name: "Scholarship Budget Management Platform",
     summary: "An internal platform for managing scholarship budgets, approvals, reporting, and auditing processes for educational institutions.",
-    image: "/images/cd96034b-f292-4060-9d66-a9cb6b220502.JPG",
+    image: "/images/scholarship.png",
     linkPreview: "#",
     techStack: ["Next.js", "Spring Boot", "PostgreSQL", "Tailwind CSS", "Spring Security"]
-  },
-  {
-    id: 2,
-    name: "Tano Digital Group",
-    summary: "A modern corporate website built for a digital transformation and technology company, showcasing services, portfolio, and company capabilities with a responsive and professional design.",
-    image: "/images/tano.png",
-    linkPreview: "https://tanodigital.com",
-    techStack: ["Next.js", "TypeScript", "Tailwind CSS", "PostgreSQL"]
   },
   {
     id: 3,
@@ -34,7 +26,7 @@ const freelanceProjects = [
     id: 4,
     name: "HaviChem Cleaning Services",
     summary: "A professional cleaning services website featuring service listings, company information, quote requests, and customer engagement features. HaviChem operates as a professional cleaning services company based in Zimbabwe.",
-    image: "/images/cd96034b-f292-4060-9d66-a9cb6b220502.JPG",
+    image: "/images/havichem.png",
     linkPreview: "https://havichemcleaning.co.zw/",
     techStack: ["Next.js", "TypeScript", "Tailwind CSS", "PostgreSQL"]
   },
