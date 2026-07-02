@@ -88,18 +88,22 @@ export default function FeaturedProjects() {
                     </div>
                     
                     <div className="flex items-center gap-4 mt-auto">
-                      <Link 
-                        href={project.linkPreview}
-                        className="px-6 py-2.5 bg-[var(--text)] text-[var(--bg)] text-sm font-semibold rounded-full hover:bg-gray-200 transition-colors"
-                      >
-                        Live Preview
-                      </Link>
-                      <Link 
-                        href={project.linkSource}
-                        className="px-6 py-2.5 bg-transparent border border-[var(--border)] text-[var(--text)] text-sm font-semibold rounded-full hover:bg-[var(--bg-card)] transition-colors"
-                      >
-                        View Source
-                      </Link>
+                      {project.linkPreview !== "#" && (
+                        <Link 
+                          href={project.linkPreview}
+                          className="px-6 py-2.5 bg-[var(--text)] text-[var(--bg)] text-sm font-semibold rounded-full hover:bg-gray-200 transition-colors"
+                        >
+                          Live Preview
+                        </Link>
+                      )}
+                      {project.linkSource !== "#" && (
+                        <Link 
+                          href={project.linkSource}
+                          className="px-6 py-2.5 bg-transparent border border-[var(--border)] text-[var(--text)] text-sm font-semibold rounded-full hover:bg-[var(--bg-card)] transition-colors"
+                        >
+                          View Source
+                        </Link>
+                      )}
                     </div>
                   </div>
 
