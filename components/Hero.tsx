@@ -18,7 +18,7 @@ export default function Hero() {
         {/* Name */}
         <motion.h1
           {...fadeUp(0)}
-          className="text-5xl lg:text-7xl font-extrabold tracking-tight mb-4"
+          className="text-4xl sm:text-5xl lg:text-7xl font-extrabold tracking-tight mb-4 leading-tight"
         >
           <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-cyan-300">
             Tinotenda Chandengenda
@@ -28,7 +28,7 @@ export default function Hero() {
         {/* Role */}
         <motion.p
           {...fadeUp(0.1)}
-          className="text-xl md:text-2xl font-medium text-[var(--text)] mb-6"
+          className="text-lg sm:text-xl md:text-2xl font-medium text-[var(--text)] mb-6"
         >
           Software Engineer
         </motion.p>
@@ -36,7 +36,7 @@ export default function Hero() {
         {/* Bio */}
         <motion.p
           {...fadeUp(0.2)}
-          className="text-base md:text-lg text-[var(--text-muted)] w-full sm:max-w-[600px] leading-relaxed mb-10"
+          className="text-sm sm:text-base md:text-lg text-[var(--text-muted)] w-full sm:max-w-[600px] leading-relaxed mb-10"
         >
           Software and DevOps Engineer with experience building scalable backend
           systems, web applications, and middleware integrations using Java,
@@ -48,17 +48,17 @@ export default function Hero() {
         {/* CTA Buttons */}
         <motion.div
           {...fadeUp(0.3)}
-          className="flex flex-wrap items-center gap-4"
+          className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4"
         >
           <a
             href="mailto:tinochan06@gmail.com"
-            className="inline-flex min-h-[48px] items-center justify-center bg-[var(--accent)] text-white rounded-full px-8 py-3 text-sm font-semibold hover:bg-blue-600 hover:shadow-[0_0_20px_var(--accent-glow)] transition-all duration-300"
+            className="inline-flex w-full sm:w-auto min-h-[48px] items-center justify-center bg-[var(--accent)] text-white rounded-full px-8 py-3 text-sm font-semibold hover:bg-blue-600 hover:shadow-[0_0_20px_var(--accent-glow)] transition-all duration-300 touch-manipulation"
           >
             Get in Touch
           </a>
           <a
             href="#projects"
-            className="inline-flex min-h-[48px] items-center justify-center glass rounded-full px-8 py-3 text-sm font-semibold text-[var(--text)] hover:bg-[var(--bg-card)] transition-all duration-300"
+            className="inline-flex w-full sm:w-auto min-h-[48px] items-center justify-center glass rounded-full px-8 py-3 text-sm font-semibold text-[var(--text)] hover:bg-[var(--bg-card)] transition-all duration-300 touch-manipulation"
           >
             View Projects
           </a>

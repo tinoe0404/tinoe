@@ -42,37 +42,46 @@ const projects = [
 ];
 
 export default function FeaturedProjects() {
+  const [isDesktop, setIsDesktop] = React.useState(true); // Default to true to prevent initial flash on desktop
+
+  React.useEffect(() => {
+    const handleResize = () => setIsDesktop(window.innerWidth >= 768);
+    handleResize(); // Set immediately on mount
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <section id="projects" className="relative w-full py-24 z-10">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="mb-16">
+        <div className="mb-12 md:mb-16 text-center md:text-left">
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-[var(--text)] mb-3">
             Featured Projects
           </h2>
-          <p className="text-[var(--text-muted)] text-base max-w-2xl">
+          <p className="text-[var(--text-muted)] text-base max-w-2xl mx-auto md:mx-0">
             A selection of my recent work. Scroll down to see the piling effect in action.
           </p>
         </div>
 
         {/* The container for the stacking cards. */}
-        <div className="relative pb-[40vh]">
+        <div className="relative pb-10 md:pb-[40vh]">
           {projects.map((project, index) => {
-            // Dynamic top offset calculation for the piling effect
+            // Dynamic top offset calculation for the piling effect on desktop
             const topOffset = 98 + index * 36;
 
             return (
               <div
                 key={project.id}
-                className="sticky w-full"
-                style={{ top: `${topOffset}px` }}
+                className="w-full mb-8 md:mb-0"
+                style={isDesktop ? { position: 'sticky', top: `${topOffset}px` } : { position: 'relative' }}
               >
                 {/* 
                   Card Inner Container — glassmorphism layout
                 */}
-                <div className="w-full glass-card rounded-3xl overflow-hidden flex flex-col md:flex-row mb-8 group transition-all duration-300 hover:border-blue-500/30 hover:shadow-[0_0_30px_rgba(59,130,246,0.1)]">
+                <div className="w-full glass-card rounded-3xl overflow-hidden flex flex-col-reverse md:flex-row mb-8 group transition-all duration-300 hover:border-blue-500/30 hover:shadow-[0_0_30px_rgba(59,130,246,0.1)]">
                   
                   {/* Left Side: Content */}
-                  <div className="flex-1 p-8 md:p-10 flex flex-col justify-center">
+                  <div className="flex-1 p-6 sm:p-8 md:p-10 flex flex-col justify-center">
                     <h3 className="text-2xl md:text-3xl font-bold mb-4 text-[var(--text)]">{project.name}</h3>
                     <p className="text-[var(--text-muted)] mb-6 text-sm md:text-base leading-relaxed">
                       {project.summary}
@@ -87,11 +96,11 @@ export default function FeaturedProjects() {
                       ))}
                     </div>
                     
-                    <div className="flex items-center gap-4 mt-auto">
+                    <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 mt-auto">
                       {project.linkPreview !== "#" && (
                         <Link 
                           href={project.linkPreview}
-                          className="px-6 py-2.5 bg-[var(--text)] text-[var(--bg)] text-sm font-semibold rounded-full hover:bg-gray-200 transition-colors"
+                          className="px-6 py-2.5 bg-[var(--text)] text-[var(--bg)] text-sm font-semibold rounded-full hover:bg-gray-200 transition-colors text-center touch-manipulation"
                         >
                           Live Preview
                         </Link>
@@ -99,7 +108,7 @@ export default function FeaturedProjects() {
                       {project.linkSource !== "#" && (
                         <Link 
                           href={project.linkSource}
-                          className="px-6 py-2.5 bg-transparent border border-[var(--border)] text-[var(--text)] text-sm font-semibold rounded-full hover:bg-[var(--bg-card)] transition-colors"
+                          className="px-6 py-2.5 bg-transparent border border-[var(--border)] text-[var(--text)] text-sm font-semibold rounded-full hover:bg-[var(--bg-card)] transition-colors text-center touch-manipulation"
                         >
                           View Source
                         </Link>
@@ -108,7 +117,7 @@ export default function FeaturedProjects() {
                   </div>
 
                   {/* Right Side: Image — optimized with Next.js Image */}
-                  <div className="w-full md:w-[45%] h-[250px] md:h-auto relative bg-[#0f0f0f] flex items-center justify-center flex-shrink-0 overflow-hidden border-t md:border-t-0 md:border-l border-[var(--border)]">
+                  <div className="w-full md:w-[45%] h-[220px] sm:h-[280px] md:h-auto relative bg-[#0f0f0f] flex items-center justify-center flex-shrink-0 overflow-hidden border-b md:border-b-0 md:border-l border-[var(--border)]">
                     <div className="absolute inset-0 bg-gradient-to-tr from-transparent to-blue-500/5 z-10 mix-blend-overlay"></div>
                     <Image
                       src={project.image}
