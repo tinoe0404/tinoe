@@ -28,7 +28,7 @@ export default function Navbar() {
         {/* Logo (Left) */}
         <Link href="/" className="flex items-center">
           <Image
-            src="/images/avatar-small.jpg"
+            src="/images/cd96034b-f292-4060-9d66-a9cb6b220502.JPG"
             alt="Logo"
             width={36}
             height={36}

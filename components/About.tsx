@@ -79,7 +79,7 @@ export default function About() {
           >
             <div className="absolute inset-0 bg-blue-500/20 rounded-2xl blur-2xl group-hover:bg-blue-500/30 transition-all duration-500 -z-10"></div>
             <Image
-              src="/images/avatar-big.jpg"
+              src="/images/cd96034b-f292-4060-9d66-a9cb6b220502.JPG"
               alt="Tinotenda Chandengenda"
               width={300}
               height={400}

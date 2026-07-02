@@ -5,30 +5,39 @@ import Image from 'next/image';
 const projects = [
   {
     id: 1,
-    name: "CashAgent",
-    summary: "A personal finance tracker with transaction categories, PIN lock security, and soft-delete. Built with Next.js 15, Neon PostgreSQL, Drizzle ORM, and Tailwind CSS.",
-    image: "/images/project-cashagent.png",
-    linkSource: "https://github.com/tinochandengenda",
-    linkPreview: "https://cashagent.vercel.app",
-    techStack: ["Next.js", "PostgreSQL", "Tailwind CSS", "Drizzle ORM"]
+    name: "HOPIN Ride Sharing Platform",
+    summary: "A ride-sharing platform with real-time communication, OTP authentication, JWT security, and an administrative dashboard for operations management.",
+    image: "/images/hopin.png",
+    linkSource: "#",
+    linkPreview: "#",
+    techStack: ["Django", "Django REST", "Django Channels", "PostgreSQL", "Redis", "WebSockets", "JWT"]
   },
   {
     id: 2,
-    name: "Go Wild Tours",
-    summary: "A full safari tourism website featuring a custom CSS design system with earth tones, Framer Motion animations, and a structured Destinations section.",
-    image: "/images/project-gowild.png",
-    linkSource: "https://github.com/tinochandengenda",
-    linkPreview: "https://gowildtours.vercel.app",
-    techStack: ["React", "Framer Motion", "Tailwind CSS"]
+    name: "CRDB SAP-ESB Middleware",
+    summary: "Enterprise middleware integrating banking operations with SAP systems, supporting funds transfers, budget control, asset depreciation, and SWIFT messaging workflows.",
+    image: "/images/crdb.png",
+    linkSource: "#",
+    linkPreview: "#",
+    techStack: ["Java 21", "Spring Boot 3", "REST APIs", "OkHttp", "Jackson", "JWT", "SAP"]
   },
   {
     id: 3,
-    name: "Joshwires",
-    summary: "A professional business website for a wire mesh and fencing company, built to world-class UI/UX standards with Next.js and Tailwind CSS.",
-    image: "/images/project-joshwires.png",
-    linkSource: "https://github.com/tinochandengenda",
-    linkPreview: "https://josh-wires.vercel.app",
-    techStack: ["Next.js", "Tailwind CSS", "Vercel"]
+    name: "NextGen Asset Recquisition System",
+    summary: "A role-based asset tracking and reqcquisition system with approval workflows, request tracking, and administrative controls.",
+    image: "/images/nextgen.png",
+    linkSource: "#",
+    linkPreview: "#",
+    techStack: ["Spring Boot", "PostgreSQL", "REST APIs", "Spring Security"]
+  },
+  {
+    id: 4,
+    name: "Tano Digital Group Website",
+    summary: "Designed and developed the corporate website for Tano Digital Group, showcasing the company’s services, portfolio, and digital transformation capabilities with a modern, responsive user experience.",
+    image: "/images/tano.png",
+    linkSource: "#",
+    linkPreview: "#",
+    techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Responsive Design"]
   }
 ];
 
