@@ -10,7 +10,7 @@ const freelanceProjects = [
     id: 1,
     name: "ERGCZ",
     summary: "Designed and developed a responsive organisation website with modern interfaces and interactive user experiences.",
-    image: "/images/ergcz.PNG",
+    image: "/images/ergcz.png",
     linkPreview: "https://www.ergcz.co.zw/",
     techStack: ["Next.js", "Tailwind CSS", "TypeScript"]
   },
@@ -18,7 +18,7 @@ const freelanceProjects = [
     id: 2,
     name: "Go Wild Tours Zim",
     summary: "Designed and developed a tourism website for a Victoria Falls-based tour operator, presenting destinations, services, and travel experiences.",
-    image: "/images/gowildtours.PNG",
+    image: "/images/gowildtours.png",
     linkPreview: "https://www.gowildtourszim.com/",
     techStack: ["Next.js", "Tailwind CSS", "TypeScript"]
   },
@@ -26,7 +26,7 @@ const freelanceProjects = [
     id: 3,
     name: "Josh Wires",
     summary: "Developed a business website and configured domain, DNS, and deployment infrastructure.",
-    image: "/images/joshwires.PNG",
+    image: "/images/joshwires.png",
     linkPreview: "https://www.joshwires.co.zw/",
     techStack: ["Next.js", "TypeScript", "Tailwind CSS", "PostgreSQL"]
   },
@@ -34,7 +34,7 @@ const freelanceProjects = [
     id: 4,
     name: "HaviChem Cleaning",
     summary: "Designed and developed a professional business website for a cleaning services company.",
-    image: "/images/havichem.PNG",
+    image: "/images/havichem.png",
     linkPreview: "https://havichemcleaning.co.zw/",
     techStack: ["Next.js", "TypeScript", "Tailwind CSS", "PostgreSQL"]
   },
@@ -42,7 +42,7 @@ const freelanceProjects = [
     id: 5,
     name: "Victoria Falls Nomadic Trails",
     summary: "Developed a tourism website for a Victoria Falls-based travel business.",
-    image: "/images/nomadictrails.PNG",
+    image: "/images/nomadictrails.png",
     linkPreview: "https://vicfallsnomadictrails.com/",
     techStack: ["Next.js", "TypeScript", "Tailwind CSS", "PostgreSQL"]
   },
@@ -50,7 +50,7 @@ const freelanceProjects = [
     id: 6,
     name: "Yet Galore",
     summary: "Developed a luxury fashion e-commerce platform with product management, database-backed functionality, and cloud-based image storage.",
-    image: "/images/yetgalore.PNG",
+    image: "/images/yetgalore.png",
     linkPreview: "https://www.yetgalore.co.zw/",
     techStack: ["Next.js", "TypeScript", "Tailwind CSS", "PostgreSQL"]
   }
