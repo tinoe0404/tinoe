@@ -30,7 +30,7 @@ export default function Hero() {
           {...fadeUp(0.1)}
           className="text-lg sm:text-xl md:text-2xl font-medium text-[var(--text)] mb-6"
         >
-          Software Engineer
+          Software Engineer | AI Engineer
         </motion.p>
 
         {/* Bio */}
@@ -38,11 +38,10 @@ export default function Hero() {
           {...fadeUp(0.2)}
           className="text-sm sm:text-base md:text-lg text-[var(--text-muted)] w-full sm:max-w-[600px] leading-relaxed mb-10"
         >
-          Software and DevOps Engineer with experience building scalable backend
-          systems, web applications, and middleware integrations using Java,
-          Spring Boot, Docker, and RESTful APIs. Focused on system design,
-          real-world problem solving, and implementing DevOps practices for
-          efficient, production-ready deployments.
+          Software and AI Engineer experienced in building full-stack applications,
+          enterprise systems, and business platforms. Skilled in Java, Spring Boot,
+          Next.js, and integrating AI functionality through LLM applications, RAG,
+          and intelligent automation to solve real-world problems.
         </motion.p>
 
         {/* CTA Buttons */}

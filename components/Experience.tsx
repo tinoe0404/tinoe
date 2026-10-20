@@ -4,13 +4,14 @@ import { motion } from "framer-motion";
 
 const experiences = [
   {
-    company: "Tano Digital Group",
-    role: "Software Engineer Intern",
-    dates: "2025 — Present",
+    company: "Tano Digital Solutions",
+    role: "Software Developer Intern",
+    dates: "Sept 2025 – Jun 2026",
     bullets: [
-      "Working on backend systems and API integrations using Java and Spring Boot in a production environment.",
-      "Collaborating with the team on DevOps workflows including Docker containerization and GitHub Actions CI/CD pipelines.",
-      "Contributing to middleware integrations and RESTful API development for client-facing applications.",
+      "HOPIN: Developed backend functionality for a ride-sharing platform, supporting real-time application workflows, authentication, messaging, and location-based functionality.",
+      "CRDB SAP-ESB: Developed and maintained financial middleware components for enterprise API integration and transaction processing.",
+      "NextGen Asset Management: Developed functionality for an enterprise asset management system, including Microsoft Entra ID authentication and multi-level approval workflows.",
+      "Participated across the software development lifecycle, including requirements analysis, API integration, debugging, testing, code reviews, deployment, and production support."
     ],
   },
 ];

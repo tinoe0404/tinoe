@@ -8,51 +8,51 @@ import Image from "next/image";
 const freelanceProjects = [
   {
     id: 1,
-    name: "Scholarship Budget Management Platform",
-    summary: "An internal platform for managing scholarship budgets, approvals, reporting, and auditing processes for educational institutions.",
-    image: "/images/scholarship.png",
-    linkPreview: "#",
-    techStack: ["Next.js", "Spring Boot", "PostgreSQL", "Tailwind CSS", "Spring Security"]
+    name: "ERGCZ",
+    summary: "Designed and developed a responsive organisation website with modern interfaces and interactive user experiences.",
+    image: "/images/ergcz.png",
+    linkPreview: "https://www.ergcz.co.zw/",
+    techStack: ["Next.js", "Tailwind CSS", "TypeScript"]
+  },
+  {
+    id: 2,
+    name: "Go Wild Tours Zim",
+    summary: "Designed and developed a tourism website for a Victoria Falls-based tour operator, presenting destinations, services, and travel experiences.",
+    image: "/images/gowildtours.png",
+    linkPreview: "https://www.gowildtourszim.com/",
+    techStack: ["Next.js", "Tailwind CSS", "TypeScript"]
   },
   {
     id: 3,
     name: "Josh Wires",
-    summary: "A corporate website developed for an electrical and wiring solutions company, featuring product showcases, service information, and customer enquiry functionality.",
-    image: "/images/project-joshwires.png",
+    summary: "Developed a business website and configured domain, DNS, and deployment infrastructure.",
+    image: "/images/joshwires.png",
     linkPreview: "https://www.joshwires.co.zw/",
     techStack: ["Next.js", "TypeScript", "Tailwind CSS", "PostgreSQL"]
   },
   {
     id: 4,
-    name: "HaviChem Cleaning Services",
-    summary: "A professional cleaning services website featuring service listings, company information, quote requests, and customer engagement features. HaviChem operates as a professional cleaning services company based in Zimbabwe.",
-    image: "/images/havichem.png",
+    name: "HaviChem Cleaning",
+    summary: "Designed and developed a professional business website for a cleaning services company.",
+    image: "/images/havichem.PNG",
     linkPreview: "https://havichemcleaning.co.zw/",
     techStack: ["Next.js", "TypeScript", "Tailwind CSS", "PostgreSQL"]
   },
   {
     id: 5,
-    name: "Vic Falls Nomadic Trails",
-    summary: "A tourism and travel website designed to showcase adventure experiences, travel packages, and destination information for visitors to Victoria Falls.",
-    image: "/images/cd96034b-f292-4060-9d66-a9cb6b220502.JPG",
+    name: "Victoria Falls Nomadic Trails",
+    summary: "Developed a tourism website for a Victoria Falls-based travel business.",
+    image: "/images/nomadictrails.PNG",
     linkPreview: "https://vicfallsnomadictrails.com/",
     techStack: ["Next.js", "TypeScript", "Tailwind CSS", "PostgreSQL"]
   },
   {
     id: 6,
     name: "Yet Galore",
-    summary: "A business website developed to present company services, strengthen online presence, and provide an accessible platform for customer enquiries and engagement.",
-    image: "/images/cd96034b-f292-4060-9d66-a9cb6b220502.JPG",
+    summary: "Developed a luxury fashion e-commerce platform with product management, database-backed functionality, and cloud-based image storage.",
+    image: "/images/yetgalore.PNG",
     linkPreview: "https://www.yetgalore.co.zw/",
     techStack: ["Next.js", "TypeScript", "Tailwind CSS", "PostgreSQL"]
-  },
-  {
-    id: 7,
-    name: "PandiSync",
-    summary: "A multi-branch Point of Sale and business management platform featuring a desktop POS application for branches and a centralized web dashboard with synchronization capabilities.",
-    image: "/images/cd96034b-f292-4060-9d66-a9cb6b220502.JPG",
-    linkPreview: "#",
-    techStack: ["JavaFX", "Spring Boot", "SQLite", "PostgreSQL", "Next.js", "TypeScript"]
   }
 ];
 
@@ -127,7 +127,7 @@ export default function FreelanceProjects() {
                     alt={project.name}
                     fill
                     sizes="45vw"
-                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                    className="object-contain p-4 transition-transform duration-700 group-hover:scale-105"
                     loading="lazy"
                   />
                 </div>
@@ -162,7 +162,7 @@ export default function FreelanceProjects() {
                   alt={project.name}
                   fill
                   sizes="85vw"
-                  className="object-cover"
+                  className="object-contain p-3"
                   loading="lazy"
                 />
               </div>

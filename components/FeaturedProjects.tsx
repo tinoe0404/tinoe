@@ -1,3 +1,5 @@
+"use client";
+
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -5,39 +7,30 @@ import Image from 'next/image';
 const projects = [
   {
     id: 1,
-    name: "HOPIN Ride Sharing Platform",
-    summary: "A ride-sharing platform with real-time communication, OTP authentication, JWT security, and an administrative dashboard for operations management.",
-    image: "/images/hopin.png",
+    name: "RONGA — Multi-Tenant SMB Platform",
+    summary: "Built a multi-tenant business platform for Zimbabwean SMBs combining inventory management, sales, POS, invoicing, and WhatsApp commerce. Implemented tenant-isolated authentication, transactional inventory, and concurrency controls.",
+    image: "/images/cd96034b-f292-4060-9d66-a9cb6b220502.JPG",
     linkSource: "#",
     linkPreview: "#",
-    techStack: ["Django", "Django REST", "Django Channels", "PostgreSQL", "Redis", "WebSockets", "JWT"]
+    techStack: ["Next.js", "Spring Boot", "PostgreSQL", "WhatsApp API", "WebSockets"]
   },
   {
     id: 2,
-    name: "CRDB SAP-ESB Middleware",
-    summary: "Enterprise middleware integrating banking operations with SAP systems, supporting funds transfers, budget control, asset depreciation, and SWIFT messaging workflows.",
-    image: "/images/crdb.png",
+    name: "ZONKE — Service Marketplace",
+    summary: "Building a service marketplace connecting customers and service providers through a mobile application and WhatsApp. Developing provider workflows, live location tracking, conversational WhatsApp workflows, and financial operations.",
+    image: "/images/cd96034b-f292-4060-9d66-a9cb6b220502.JPG",
     linkSource: "#",
     linkPreview: "#",
-    techStack: ["Java 21", "Spring Boot 3", "REST APIs", "OkHttp", "Jackson", "JWT", "SAP"]
+    techStack: ["React Native", "Node.js", "PostgreSQL", "WhatsApp API", "Stripe"]
   },
   {
     id: 3,
-    name: "NextGen Asset Recquisition System",
-    summary: "A role-based asset tracking and reqcquisition system with approval workflows, request tracking, and administrative controls.",
-    image: "/images/nextgen.png",
+    name: "SMEGUARD AI",
+    summary: "Developing a self-healing IT infrastructure monitoring system using machine learning anomaly detection and an AI-powered diagnostic layer that converts detected system issues into plain-language explanations and automated remediation.",
+    image: "/images/cd96034b-f292-4060-9d66-a9cb6b220502.JPG",
     linkSource: "#",
     linkPreview: "#",
-    techStack: ["Spring Boot", "PostgreSQL", "REST APIs", "Spring Security"]
-  },
-  {
-    id: 4,
-    name: "Tano Digital Group Website",
-    summary: "Designed and developed the corporate website for Tano Digital Group, showcasing the company’s services, portfolio, and digital transformation capabilities with a modern, responsive user experience.",
-    image: "/images/tano.png",
-    linkSource: "#",
-    linkPreview: "#",
-    techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Responsive Design"]
+    techStack: ["Python", "FastAPI", "scikit-learn", "LLMs", "RAG", "Ollama"]
   }
 ];
 

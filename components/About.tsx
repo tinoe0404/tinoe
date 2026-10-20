@@ -29,17 +29,17 @@ export default function About() {
             transition={{ duration: 0.5, delay: 0.1, ease: "easeOut" as const }}
             className="flex-1 w-full text-center md:text-left"
           >
-            <p className="text-base md:text-lg text-[var(--text-muted)] leading-loose md:leading-relaxed max-w-lg mx-auto md:mx-0 mb-8">
-              I&apos;m <span className="text-[var(--text)] font-medium">Tinotenda Chandengenda</span>, a Software and DevOps Engineer
-              based in Harare, Zimbabwe. I&apos;m passionate about building
-              real-world systems that are scalable, maintainable, and
-              production-ready. My work spans backend development with Java and
-              Spring Boot, full-stack web apps with Next.js and NestJS, and
-              DevOps pipelines using Docker and GitHub Actions. I&apos;m
-              currently interning at Tano Digital Group while pursuing my degree
-              at Harare Institute of Technology, and I take on freelance client
-              projects on the side.
-            </p>
+            <div className="text-base md:text-lg text-[var(--text-muted)] leading-loose md:leading-relaxed max-w-lg mx-auto md:mx-0 mb-8 space-y-4">
+              <p>
+                I&apos;m <span className="text-[var(--text)] font-medium">Tinotenda Chandengenda</span>, a final-year Software Engineering student at the Harare Institute of Technology with commercial and freelance experience building full-stack applications, enterprise systems, financial integrations, and business platforms.
+              </p>
+              <p>
+                I am experienced in designing and developing backend and frontend systems, APIs, authentication, databases, real-time functionality, system integrations, and transactional workflows. I have built complex software independently, including multi-tenant business platforms, service marketplaces, financial workflows, and AI-enabled systems.
+              </p>
+              <p>
+                Currently, I am developing practical AI Engineering expertise through LLM applications, Retrieval-Augmented Generation (RAG), AI agents, embeddings, vector search, machine learning, anomaly detection, and intelligent automation.
+              </p>
+            </div>
 
             <div className="flex flex-wrap justify-center md:justify-start gap-4">
               <a
