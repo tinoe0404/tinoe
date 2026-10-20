@@ -2,14 +2,14 @@
 
 import React from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
+
 
 const projects = [
   {
     id: 1,
     name: "RONGA — Multi-Tenant SMB Platform",
     summary: "Built a multi-tenant business platform for Zimbabwean SMBs combining inventory management, sales, POS, invoicing, and WhatsApp commerce. Implemented tenant-isolated authentication, transactional inventory, and concurrency controls.",
-    image: "/images/cd96034b-f292-4060-9d66-a9cb6b220502.JPG",
+
     linkSource: "#",
     linkPreview: "#",
     techStack: ["Next.js", "Spring Boot", "PostgreSQL", "WhatsApp API", "WebSockets"]
@@ -18,7 +18,7 @@ const projects = [
     id: 2,
     name: "ZONKE — Service Marketplace",
     summary: "Building a service marketplace connecting customers and service providers through a mobile application and WhatsApp. Developing provider workflows, live location tracking, conversational WhatsApp workflows, and financial operations.",
-    image: "/images/cd96034b-f292-4060-9d66-a9cb6b220502.JPG",
+
     linkSource: "#",
     linkPreview: "#",
     techStack: ["React Native", "Node.js", "PostgreSQL", "WhatsApp API", "Stripe"]
@@ -27,7 +27,7 @@ const projects = [
     id: 3,
     name: "SMEGUARD AI",
     summary: "Developing a self-healing IT infrastructure monitoring system using machine learning anomaly detection and an AI-powered diagnostic layer that converts detected system issues into plain-language explanations and automated remediation.",
-    image: "/images/cd96034b-f292-4060-9d66-a9cb6b220502.JPG",
+
     linkSource: "#",
     linkPreview: "#",
     techStack: ["Python", "FastAPI", "scikit-learn", "LLMs", "RAG", "Ollama"]
@@ -71,7 +71,7 @@ export default function FeaturedProjects() {
                 {/* 
                   Card Inner Container — glassmorphism layout
                 */}
-                <div className="w-full glass-card rounded-3xl overflow-hidden flex flex-col-reverse md:flex-row mb-8 group transition-all duration-300 hover:border-blue-500/30 hover:shadow-[0_0_30px_rgba(59,130,246,0.1)]">
+                <div className="w-full glass-card rounded-3xl overflow-hidden flex flex-col mb-8 group transition-all duration-300 hover:border-blue-500/30 hover:shadow-[0_0_30px_rgba(59,130,246,0.1)]">
                   
                   {/* Left Side: Content */}
                   <div className="flex-1 p-6 sm:p-8 md:p-10 flex flex-col justify-center">
@@ -109,19 +109,7 @@ export default function FeaturedProjects() {
                     </div>
                   </div>
 
-                  {/* Right Side: Image — optimized with Next.js Image */}
-                  <div className="w-full md:w-[45%] h-[220px] sm:h-[280px] md:h-auto relative bg-[#0f0f0f] flex items-center justify-center flex-shrink-0 overflow-hidden border-b md:border-b-0 md:border-l border-[var(--border)]">
-                    <div className="absolute inset-0 bg-gradient-to-tr from-transparent to-blue-500/5 z-10 mix-blend-overlay"></div>
-                    <Image
-                      src={project.image}
-                      alt={project.name}
-                      fill
-                      sizes="(max-width: 768px) 100vw, 45vw"
-                      className="object-cover transition-transform duration-500 group-hover:scale-105"
-                      loading="lazy"
-                      placeholder="empty"
-                    />
-                  </div>
+
                   
                 </div>
               </div>

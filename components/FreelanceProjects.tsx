@@ -10,7 +10,7 @@ const freelanceProjects = [
     id: 1,
     name: "ERGCZ",
     summary: "Designed and developed a responsive organisation website with modern interfaces and interactive user experiences.",
-    image: "/images/ergcz.png",
+    image: "/images/ergcz.PNG",
     linkPreview: "https://www.ergcz.co.zw/",
     techStack: ["Next.js", "Tailwind CSS", "TypeScript"]
   },
@@ -18,7 +18,7 @@ const freelanceProjects = [
     id: 2,
     name: "Go Wild Tours Zim",
     summary: "Designed and developed a tourism website for a Victoria Falls-based tour operator, presenting destinations, services, and travel experiences.",
-    image: "/images/gowildtours.png",
+    image: "/images/gowildtours.PNG",
     linkPreview: "https://www.gowildtourszim.com/",
     techStack: ["Next.js", "Tailwind CSS", "TypeScript"]
   },
@@ -26,7 +26,7 @@ const freelanceProjects = [
     id: 3,
     name: "Josh Wires",
     summary: "Developed a business website and configured domain, DNS, and deployment infrastructure.",
-    image: "/images/joshwires.png",
+    image: "/images/joshwires.PNG",
     linkPreview: "https://www.joshwires.co.zw/",
     techStack: ["Next.js", "TypeScript", "Tailwind CSS", "PostgreSQL"]
   },

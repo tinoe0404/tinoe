@@ -48,7 +48,7 @@ export default function Navbar() {
           {/* Logo (Left) */}
           <Link href="/" className="flex items-center z-50" onClick={() => setMobileMenuOpen(false)}>
             <Image
-              src="/images/cd96034b-f292-4060-9d66-a9cb6b220502.JPG"
+              src="/images/avatar11.jpeg"
               alt="Logo"
               width={36}
               height={36}
